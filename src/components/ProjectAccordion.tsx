@@ -71,8 +71,6 @@ export const ProjectAccordion = ({
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-ink-300">
             <div className="flex flex-wrap items-center gap-3">
-              <span>{project.period}</span>
-              <span className="h-1 w-1 rounded-full bg-ink-300/60" />
               <span>{project.type}</span>
             </div>
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent-500/35 bg-accent-500/18 text-xl font-semibold text-accent-400 shadow-[0_8px_24px_rgba(20,184,166,0.12),inset_0_1px_0_rgba(255,255,255,0.08)] transition group-hover:border-accent-500/60 group-hover:bg-accent-500/24 group-hover:text-ink-50">
@@ -206,4 +204,3 @@ export const ProjectAccordion = ({
     </article>
   );
 };
-
