@@ -6,11 +6,34 @@ interface ProjectAccordionProps {
   defaultOpen?: boolean;
 }
 
+const getPreviewLinkLayout = (project: ProjectItem) => {
+  if (project.name === "Sellivu") {
+    return {
+      containerClass: "grid grid-cols-2 gap-2 lg:max-w-[240px]",
+      itemClass: (label: string) =>
+        label === "Deploy" ? "col-span-2" : "col-span-1",
+    };
+  }
+
+  if (project.name === "Stock Dashboard") {
+    return {
+      containerClass: "grid grid-cols-2 gap-2 lg:max-w-[260px]",
+      itemClass: () => "col-span-1",
+    };
+  }
+
+  return {
+    containerClass: "flex flex-wrap gap-2 lg:max-w-[240px]",
+    itemClass: () => "",
+  };
+};
+
 export const ProjectAccordion = ({
   project,
   defaultOpen = false,
 }: ProjectAccordionProps) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+  const previewLinkLayout = getPreviewLinkLayout(project);
 
   return (
     <article className="group rounded-3xl border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.02))] p-6 shadow-panel transition duration-300 hover:border-accent-500/24 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] hover:shadow-panelStrong">
@@ -76,7 +99,7 @@ export const ProjectAccordion = ({
               <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-accent-500">
                 Links
               </p>
-              <div className="flex flex-wrap gap-2 lg:flex-col lg:items-start">
+              <div className={previewLinkLayout.containerClass}>
                 {project.links.map((link) => (
                   <a
                     key={link.label}
@@ -84,7 +107,7 @@ export const ProjectAccordion = ({
                     target="_blank"
                     rel="noreferrer"
                     onClick={(event) => event.stopPropagation()}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1.5 text-xs text-ink-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition hover:border-accent-500/50 hover:text-accent-400"
+                    className={`inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1.5 text-xs text-ink-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] transition hover:border-accent-500/50 hover:text-accent-400 ${previewLinkLayout.itemClass(link.label)}`}
                   >
                     <span>{link.label}</span>
                     <span aria-hidden="true">↗</span>
