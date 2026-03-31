@@ -36,7 +36,7 @@ export const projects: ProjectItem[] = [
       { label: "Deploy", href: "https://sellivu.vercel.app/" },
       {
         label: "상세문서",
-        href: "https://www.notion.so/Sellivu-33294741d9a680048f7afae5069653ae?source=copy_link",
+        href: "https://www.notion.so/Sellivu-33494741d9a680ba9094c305bbefd1f5?source=copy_link",
       },
     ],
   },
@@ -73,7 +73,7 @@ export const projects: ProjectItem[] = [
       { label: "Deploy", href: "https://stock-frontend-five-delta.vercel.app/" },
       {
         label: "상세문서",
-        href: "https://www.notion.so/Stock-Dashboard-Spring-Boot-31694741d9a680138073dcfef05f151c?source=copy_link",
+        href: "https://www.notion.so/Stock-Dashboard-Spring-Boot-33494741d9a6801f9726ca615bfe16da?source=copy_link",
       },
     ],
   },
@@ -101,8 +101,9 @@ export const projects: ProjectItem[] = [
     links: [
       {
         label: "상세문서",
-        href: "https://www.notion.so/Yeogiska-559084e8621f481292da15e88686ce81?source=copy_link",
+        href: "https://www.notion.so/Yeogiska-33494741d9a680799e1ddb1e15bedff3?source=copy_link",
       },
     ],
   },
 ];
+
