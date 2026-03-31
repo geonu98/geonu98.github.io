@@ -25,12 +25,16 @@ export const ContactSection = () => {
         {contactNotes.map((note) => (
           <article
             key={note.title}
-            className="rounded-3xl border border-white/6 bg-white/[0.03] p-5"
+            className="relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(180deg,rgba(19,32,50,0.98),rgba(13,23,38,0.96))] p-5 shadow-[0_30px_90px_rgba(3,10,18,0.5),0_0_0_1px_rgba(255,255,255,0.03),inset_0_1px_0_rgba(255,255,255,0.08)] transition duration-300 hover:border-accent-500/20 hover:shadow-[0_34px_110px_rgba(3,10,18,0.58),0_0_0_1px_rgba(79,209,197,0.08),inset_0_1px_0_rgba(255,255,255,0.1)]"
           >
-            <p className="font-mono text-xs uppercase tracking-[0.22em] text-accent-500">
-              {note.title}
-            </p>
-            <p className="mt-3 text-sm leading-7 text-ink-200">{note.description}</p>
+            <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.05),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent_18%)]" />
+            <div className="pointer-events-none absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-white/35 to-transparent" />
+            <div className="relative z-10">
+              <p className="font-mono text-xs uppercase tracking-[0.22em] text-accent-500">
+                {note.title}
+              </p>
+              <p className="mt-3 text-sm leading-7 text-ink-200">{note.description}</p>
+            </div>
           </article>
         ))}
       </div>
