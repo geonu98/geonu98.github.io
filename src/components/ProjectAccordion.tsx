@@ -20,7 +20,7 @@ export const ProjectAccordion = ({
         className="w-full text-left"
         aria-expanded={isOpen}
       >
-        <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+        <div className="grid gap-6 xl:grid-cols-[minmax(0,1.45fr)_280px] xl:items-start">
           <div className="space-y-4">
             <div className="space-y-3">
               <div className="flex flex-wrap items-center gap-3 text-sm text-ink-300">
@@ -37,7 +37,7 @@ export const ProjectAccordion = ({
                     {project.summary}
                   </p>
                 </div>
-                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full border border-accent-500/35 bg-accent-500/18 text-xl font-semibold text-accent-400 transition group-hover:border-accent-500/60 group-hover:bg-accent-500/24 group-hover:text-ink-50">
+                <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent-500/35 bg-accent-500/18 text-xl font-semibold text-accent-400 transition group-hover:border-accent-500/60 group-hover:bg-accent-500/24 group-hover:text-ink-50">
                   {isOpen ? "−" : "+"}
                 </span>
               </div>
@@ -72,6 +72,37 @@ export const ProjectAccordion = ({
               </ul>
             </div>
           </div>
+
+          <div className="space-y-4">
+            <div className="overflow-hidden rounded-2xl border border-white/8 bg-surface-900/70">
+              <img
+                src={project.image}
+                alt={project.imageAlt}
+                className="aspect-[16/10] h-full w-full object-cover object-top"
+                loading="lazy"
+              />
+            </div>
+            <div className="space-y-3 rounded-2xl border border-white/8 bg-white/[0.02] p-4">
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent-500">
+                Links
+              </p>
+              <div className="flex flex-wrap gap-2 xl:flex-col">
+                {project.links.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={(event) => event.stopPropagation()}
+                    className="inline-flex items-center justify-between gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-ink-100 transition hover:border-accent-500/50 hover:text-accent-400 xl:w-full"
+                  >
+                    <span>{link.label}</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </button>
 
@@ -98,7 +129,7 @@ export const ProjectAccordion = ({
 
             <div className="space-y-4">
               <h4 className="font-mono text-xs uppercase tracking-[0.24em] text-accent-500">
-                Links
+                Detail Links
               </h4>
               <div className="flex flex-wrap gap-3">
                 {project.links.map((link) => (

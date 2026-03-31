@@ -1,4 +1,4 @@
-export type NavSectionId = "about" | "skills" | "projects" | "contact";
+﻿export type NavSectionId = "about" | "skills" | "projects" | "contact";
 
 export interface NavItem {
   id: NavSectionId;
@@ -30,4 +30,6 @@ export interface ProjectItem {
   highlights: string[];
   details: string[];
   links: ProjectLink[];
+  image: string;
+  imageAlt: string;
 }

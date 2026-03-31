@@ -39,6 +39,8 @@ export const projects: ProjectItem[] = [
         href: "https://www.notion.so/Sellivu-33494741d9a680ba9094c305bbefd1f5?source=copy_link",
       },
     ],
+    image: "/projects/sellivu.png",
+    imageAlt: "Sellivu 정산 분석 상세 리포트 화면",
   },
   {
     name: "Stock Dashboard",
@@ -76,6 +78,8 @@ export const projects: ProjectItem[] = [
         href: "https://www.notion.so/Stock-Dashboard-Spring-Boot-33494741d9a6801f9726ca615bfe16da?source=copy_link",
       },
     ],
+    image: "/projects/stock-dashboard.jpg",
+    imageAlt: "Stock Dashboard 홈 화면",
   },
   {
     name: "스터디카페 예약 서비스",
@@ -104,6 +108,7 @@ export const projects: ProjectItem[] = [
         href: "https://www.notion.so/Yeogiska-33494741d9a680799e1ddb1e15bedff3?source=copy_link",
       },
     ],
+    image: "/projects/yeogiska.jpg",
+    imageAlt: "스터디카페 예약 서비스 지도 화면",
   },
 ];
-
