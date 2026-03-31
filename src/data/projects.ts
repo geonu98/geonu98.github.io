@@ -108,7 +108,8 @@ export const projects: ProjectItem[] = [
         href: "https://www.notion.so/Yeogiska-33494741d9a680799e1ddb1e15bedff3?source=copy_link",
       },
     ],
-    image: "/projects/yeogiska.jpg",
+    image: "/projects/yeogiska-map.jpg",
     imageAlt: "스터디카페 예약 서비스 지도 화면",
   },
 ];
+
