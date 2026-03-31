@@ -41,8 +41,8 @@ export const ProjectAccordion = ({
                   {isOpen ? "−" : "+"}
                 </span>
               </div>
-              <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-ink-300/80">
-                <span className="h-px w-10 bg-accent-500/40" />
+              <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.22em] text-ink-50">
+                <span className="h-px w-10 bg-accent-500/55" />
                 <span>{isOpen ? "클릭해서 접기" : "클릭해서 상세 보기"}</span>
               </div>
             </div>
