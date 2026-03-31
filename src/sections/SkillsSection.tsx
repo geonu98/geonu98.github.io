@@ -1,4 +1,4 @@
-import { SectionHeading } from "../components/SectionHeading";
+﻿import { SectionHeading } from "../components/SectionHeading";
 import { skillGroups } from "../data/skills";
 
 export const SkillsSection = () => {
@@ -13,14 +13,14 @@ export const SkillsSection = () => {
         {skillGroups.map((group) => (
           <article
             key={group.title}
-            className="rounded-3xl border border-white/6 bg-white/[0.03] p-6"
+            className="rounded-3xl border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-6 shadow-panel transition duration-300 hover:border-accent-500/18 hover:shadow-panelStrong"
           >
             <h3 className="text-lg font-semibold text-ink-50">{group.title}</h3>
             <div className="mt-4 flex flex-wrap gap-2">
               {group.items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-white/8 bg-surface-800 px-3 py-1.5 text-sm text-ink-100"
+                  className="rounded-full border border-white/10 bg-[linear-gradient(180deg,rgba(27,43,64,0.92),rgba(19,32,50,0.92))] px-3 py-1.5 text-sm text-ink-100 shadow-[0_10px_24px_rgba(5,12,22,0.18),inset_0_1px_0_rgba(255,255,255,0.05)]"
                 >
                   {item}
                 </span>

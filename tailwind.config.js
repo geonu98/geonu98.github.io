@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
@@ -27,7 +27,9 @@ export default {
         mono: ["'IBM Plex Mono'", "monospace"]
       },
       boxShadow: {
-        card: "0 24px 80px rgba(8, 17, 31, 0.4)"
+        card: "0 24px 80px rgba(8, 17, 31, 0.4)",
+        panel: "0 18px 60px rgba(5, 12, 22, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.06)",
+        panelStrong: "0 22px 70px rgba(5, 12, 22, 0.42), 0 0 0 1px rgba(79, 209, 197, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.08)"
       },
       keyframes: {
         reveal: {
